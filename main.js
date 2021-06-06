@@ -7,8 +7,8 @@ function createWindow() {
         height: 600,
         webPreferences: {
             preload: path.join(__dirname, 'preload.js'),
-            nodeIntegration: true,
-            contextIsolation: false
+            // nodeIntegration: true,
+            // contextIsolation: false
         }
     })
 
@@ -37,5 +37,5 @@ ipcMain.on('asynchronous-message', (event, arg) => {
 
 ipcMain.on('synchronous-message', (event, arg) => {
     console.log(arg) // prints "ping"
-    event.returnValue = 'pong'
+    event.returnValue = 'pong-pre'
 })

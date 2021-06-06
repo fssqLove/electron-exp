@@ -1,10 +1,10 @@
-const { ipcRenderer } = require('electron')
-console.log(ipcRenderer.sendSync('synchronous-message', 'ping')) // prints "pong"
+// const { ipcRenderer } = require('electron')
 
-ipcRenderer.on('asynchronous-reply', (event, arg) => {
-    console.log(arg) // prints "pong"
-})
-ipcRenderer.send('asynchronous-message', 'ping')
-console.log('hello', ipcRenderer)
+
+// ipcRenderer.on('asynchronous-reply', (event, arg) => {
+//     console.log(arg) // prints "pong"
+// })
+// ipcRenderer.send('asynchronous-message', 'ping')
+console.log('hello')
 
 
