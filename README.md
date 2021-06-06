@@ -122,3 +122,5 @@ console.log('hello')
 ```npm
 yarn add electron-builder --dev
 ```
+
+**注意：要想在渲染进程中使用 node 模块，需要在`webPreferences`中配置`nodeIntegration: true`,`contextIsolation: false`**
