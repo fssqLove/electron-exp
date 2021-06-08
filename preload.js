@@ -11,3 +11,12 @@ window.addEventListener('DOMContentLoaded', () => {
         replaceText(`${dependency}-version`, process.versions[dependency])
     }
 })
+
+
+ipcRenderer.on('asynchronous-reply', (event, arg) => {
+    console.log(arg) // prints "pong"
+})
+
+window.asynchronous = function () {
+    ipcRenderer.send('asynchronous-message', 'ping')
+}

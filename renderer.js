@@ -7,4 +7,10 @@
 // ipcRenderer.send('asynchronous-message', 'ping')
 console.log('hello')
 
+// window.asynchronous()
+
+setTimeout(() => {
+    window.asynchronous()
+}, 100)
+
 
